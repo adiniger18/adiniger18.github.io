@@ -326,6 +326,19 @@
   }
 
   /* ── LANG ── */
+
+  /* ── ACTUALITÉS ── */
+  #actualites { background:#FFF4E8; }
+  .news-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:22px; margin-top:30px; }
+  .news-card { background:var(--white); border-radius:16px; overflow:hidden; box-shadow:0 4px 18px rgba(200,80,10,0.08); display:flex; flex-direction:column; transition:transform 0.2s, box-shadow 0.2s; }
+  .news-card:hover { transform:translateY(-3px); box-shadow:0 10px 26px rgba(200,80,10,0.15); }
+  .news-card img { width:100%; height:190px; object-fit:cover; display:block; }
+  .news-body { padding:18px 20px 22px; }
+  .news-date { font-size:0.7rem; text-transform:uppercase; letter-spacing:1.5px; color:var(--orange); font-weight:700; margin-bottom:8px; }
+  .news-body h3 { font-family:'Playfair Display',serif; font-size:1.08rem; color:var(--orange-dark); line-height:1.35; margin-bottom:8px; }
+  .news-body p { font-size:0.88rem; line-height:1.7; color:#4A3828; white-space:pre-line; }
+  .news-empty { margin-top:24px; color:var(--gray); font-size:0.92rem; }
+
   [data-fr],[data-en]{display:none;}
   .lang-fr [data-fr]{display:block;}
   .lang-fr span[data-fr],.lang-fr a[data-fr],.lang-fr label[data-fr]{display:inline;}
@@ -353,6 +366,7 @@
   <a href="#objectifs" data-fr>Objectifs</a><a href="#objectifs" data-en>Objectives</a>
   <a href="#domaines" data-fr>Domaines</a><a href="#domaines" data-en>Focus Areas</a>
   <a href="#galerie" data-fr>Projets</a><a href="#galerie" data-en>Projects</a>
+  <a href="#actualites" data-fr>Actualités</a><a href="#actualites" data-en>News</a>
   <a href="#strategies" data-fr>Stratégies</a><a href="#strategies" data-en>Strategies</a>
   <a href="#equipe" data-fr>Équipe</a><a href="#equipe" data-en>Team</a>
   <a href="#contact">Contact</a>
@@ -406,8 +420,8 @@
     <div class="about-grid">
       <div>
         <div class="divider"></div>
-        <p class="section-body" data-fr>ADI Niger intervient dans les régions les plus vulnérables du pays — Tillabéri, Maradi, Dosso — à travers des formations professionnelles, des activités génératrices de revenus, des sensibilisations communautaires et la protection des droits fondamentaux.</p>
-        <p class="section-body" data-en>ADI Niger operates in the most vulnerable regions — Tillabéri, Maradi, Dosso — through vocational training, income-generating activities, community awareness campaigns, and fundamental rights protection.</p>
+        <p class="section-body" data-fr>ADI Niger intervient dans toutes les régions du Niger, auprès des communautés les plus vulnérables, à travers des formations professionnelles, des activités génératrices de revenus, des sensibilisations communautaires et la protection des droits fondamentaux.</p>
+        <p class="section-body" data-en>ADI Niger operates in all regions of Niger, supporting the most vulnerable communities, through vocational training, income-generating activities, community awareness campaigns, and fundamental rights protection.</p>
         <p class="org-title" data-fr>Structure organisationnelle</p>
         <p class="org-title" data-en>Organizational structure</p>
         <div class="org-item"><div class="org-dot"></div><span data-fr>Assemblée Générale (AG)</span><span data-en>General Assembly (AG)</span></div>
@@ -428,10 +442,11 @@
           <div class="lbl" data-en>International partner networks</div>
         </div>
         <div class="about-stat">
-          <div class="num">3</div>
+          <div class="num">8</div>
           <div class="lbl" data-fr>Régions d'intervention</div>
           <div class="lbl" data-en>Regions of intervention</div>
-          <div class="sub">Tillabéri · Maradi · Dosso</div>
+          <div class="sub" data-fr>Toutes les régions du Niger</div>
+          <div class="sub" data-en>All regions of Niger</div>
         </div>
       </div>
     </div>
@@ -478,7 +493,7 @@
     <div class="domains-grid">
       <div class="domain-card"><span class="icon">👩‍🌾</span><h3 data-fr>Femmes & Autonomisation</h3><h3 data-en>Women & Empowerment</h3><p data-fr>AGR, saponification, embouche, micro-crédits, leadership féminin</p><p data-en>Income activities, soap-making, livestock, micro-credits, female leadership</p></div>
       <div class="domain-card"><span class="icon">👧</span><h3 data-fr>Protection de l'Enfant</h3><h3 data-en>Child Protection</h3><p data-fr>Lutte contre le mariage précoce, scolarisation des filles, droits de l'enfant</p><p data-en>Fighting early marriage, girls' schooling, children's rights</p></div>
-      <div class="domain-card"><span class="icon">🌱</span><h3 data-fr>Développement Rural</h3><h3 data-en>Rural Development</h3><p data-fr>Tillabéri, Maradi, Dosso — appui aux communautés rurales</p><p data-en>Tillabéri, Maradi, Dosso — rural community support</p></div>
+      <div class="domain-card"><span class="icon">🌱</span><h3 data-fr>Développement Rural</h3><h3 data-en>Rural Development</h3><p data-fr>Toutes les régions du Niger — appui aux communautés rurales</p><p data-en>All regions of Niger — rural community support</p></div>
       <div class="domain-card"><span class="icon">📚</span><h3 data-fr>Éducation & Formation</h3><h3 data-en>Education & Training</h3><p data-fr>Alphabétisation, formation professionnelle, réinsertion scolaire</p><p data-en>Literacy, vocational training, school reintegration</p></div>
       <div class="domain-card"><span class="icon">💧</span><h3 data-fr>Eau & Environnement</h3><h3 data-en>Water & Environment</h3><p data-fr>Puits, mini adductions d'eau, hygiène, agriculture irriguée</p><p data-en>Wells, water supply, hygiene, irrigated agriculture</p></div>
       <div class="domain-card"><span class="icon">🌐</span><h3 data-fr>Migration & Droits Humains</h3><h3 data-en>Migration & Human Rights</h3><p data-fr>Réinsertion des migrants, droits fondamentaux, paix sociale</p><p data-en>Migrant reintegration, fundamental rights, social peace</p></div>
@@ -572,6 +587,21 @@
   </div>
 </section>
 
+<!-- ACTUALITÉS -->
+<section id="actualites">
+  <div class="section-inner">
+    <p class="section-label" data-fr>Restez informés</p>
+    <p class="section-label" data-en>Stay informed</p>
+    <h2 class="section-title" data-fr>Actualités</h2>
+    <h2 class="section-title" data-en>News</h2>
+    <p class="section-body" data-fr>Retrouvez ici les dernières activités et nouvelles d'ADI Niger.</p>
+    <p class="section-body" data-en>Find here the latest activities and news from ADI Niger.</p>
+    <div class="news-grid" id="news-grid"></div>
+    <p class="news-empty" id="news-empty" data-fr style="display:none">Les actualités arrivent bientôt.</p>
+    <p class="news-empty" id="news-empty-en" data-en style="display:none">News coming soon.</p>
+  </div>
+</section>
+
 <!-- STRATÉGIES -->
 <section id="strategies">
   <div class="section-inner">
@@ -661,6 +691,52 @@
     document.documentElement.lang=lang;
   }
   document.body.classList.add('lang-fr');
+
+  /* ── ACTUALITÉS : lit le fichier posts.json ── */
+  (function(){
+    var grid = document.getElementById('news-grid');
+    function showEmpty(){
+      var fr = document.getElementById('news-empty'), en = document.getElementById('news-empty-en');
+      fr.style.removeProperty('display'); en.style.removeProperty('display');
+    }
+    function el(tag, text, attrs){
+      var e = document.createElement(tag);
+      if (text) e.textContent = text;
+      if (attrs) for (var k in attrs) e.setAttribute(k, attrs[k]);
+      return e;
+    }
+    function fmt(d, loc){
+      var dt = new Date(d + 'T12:00:00');
+      if (isNaN(dt)) return d;
+      return dt.toLocaleDateString(loc, {day:'numeric', month:'long', year:'numeric'});
+    }
+    fetch('posts.json', {cache:'no-store'})
+      .then(function(r){ if(!r.ok) throw new Error('HTTP '+r.status); return r.json(); })
+      .then(function(posts){
+        if (!Array.isArray(posts) || !posts.length) { showEmpty(); return; }
+        posts.sort(function(a,b){ return String(b.date).localeCompare(String(a.date)); });
+        posts.forEach(function(p){
+          var card = el('article', '', {'class':'news-card'});
+          if (p.image) {
+            var img = el('img', '', {src:p.image, loading:'lazy', alt:p.titre_fr || p.titre_en || ''});
+            img.onerror = function(){ img.remove(); };
+            card.appendChild(img);
+          }
+          var body = el('div', '', {'class':'news-body'});
+          var date = el('div', '', {'class':'news-date'});
+          date.appendChild(el('span', fmt(p.date,'fr-FR'), {'data-fr':''}));
+          date.appendChild(el('span', fmt(p.date,'en-GB'), {'data-en':''}));
+          body.appendChild(date);
+          body.appendChild(el('h3', p.titre_fr || p.titre_en || '', {'data-fr':''}));
+          body.appendChild(el('h3', p.titre_en || p.titre_fr || '', {'data-en':''}));
+          body.appendChild(el('p', p.texte_fr || p.texte_en || '', {'data-fr':''}));
+          body.appendChild(el('p', p.texte_en || p.texte_fr || '', {'data-en':''}));
+          card.appendChild(body);
+          grid.appendChild(card);
+        });
+      })
+      .catch(function(){ showEmpty(); });
+  })();
 </script>
 </body>
 </html>
